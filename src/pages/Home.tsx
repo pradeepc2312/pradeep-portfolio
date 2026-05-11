@@ -30,9 +30,9 @@ export function Home(): JSX.Element {
         <link rel="canonical" href="https://pradeepc.dev/" />
       </Helmet>
       <Hero />
+      <About id="about" />
       <WorkGrid id="work" />
       <TechStack />
-      <About />
       <Contact />
     </>
   );
