@@ -34,7 +34,7 @@ const softSkills = [
 
 function SkillCard({ label, icon }: { label: string; icon: string }) {
   return (
-    <div className="group mx-3 flex shrink-0 flex-col items-center gap-3 rounded-2xl border border-border bg-surface/70 px-8 py-5 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:bg-surface hover:shadow-[0_6px_24px_rgba(139,92,246,0.13)]">
+    <div className="group mx-5 flex shrink-0 flex-col items-center gap-3 rounded-2xl border border-border bg-surface/70 px-8 py-5 backdrop-blur-sm transition-all duration-300 hover:border-accent/50 hover:bg-surface hover:shadow-[0_6px_24px_rgba(139,92,246,0.13)]">
       <img
         src={icon}
         alt={label}
@@ -111,7 +111,7 @@ export function Skills({ id }: SkillsProps): JSX.Element {
 
       {/* ── marquee rows (full-width, outside container) ── */}
       <motion.div
-        className="flex flex-col gap-5"
+        className="flex flex-col gap-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

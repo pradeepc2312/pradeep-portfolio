@@ -5,8 +5,8 @@ import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Hero } from '../components/Hero';
 import { Skills } from '../components/Skills';
-import { TechStack } from '../components/TechStack';
 import { WorkGrid } from '../components/WorkGrid';
+import { Certifications } from '../components/Certifications';
 
 export function Home(): JSX.Element {
   const location = useLocation();
@@ -34,8 +34,8 @@ export function Home(): JSX.Element {
       <About id="about" />
       <Skills id="skills" />
       <WorkGrid id="work" />
-      <TechStack />
-      <Contact />
+      <Certifications id="certifications" />
+      <Contact id="contact" />
     </>
   );
 }
