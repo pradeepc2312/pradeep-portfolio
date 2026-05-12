@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Hero } from '../components/Hero';
+import { Skills } from '../components/Skills';
 import { TechStack } from '../components/TechStack';
 import { WorkGrid } from '../components/WorkGrid';
 
@@ -31,6 +32,7 @@ export function Home(): JSX.Element {
       </Helmet>
       <Hero />
       <About id="about" />
+      <Skills id="skills" />
       <WorkGrid id="work" />
       <TechStack />
       <Contact />

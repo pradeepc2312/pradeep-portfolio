@@ -55,7 +55,7 @@ const iconProps = { size: 18, strokeWidth: 1.5 } as const;
 
 export function TechStack({ id }: TechStackProps): JSX.Element {
   return (
-    <section id={id} className="border-y border-border bg-surface/40 py-18 md:py-22" aria-labelledby="stack-heading">
+    <section id={id} className="border-y border-border bg-surface/40 py-14 md:py-18" aria-labelledby="stack-heading">
       <div className="mx-auto max-w-screen-xl px-5 md:px-10">
         <h2 id="stack-heading" className="font-mono text-xl font-medium tracking-tight text-fg md:text-2xl">
           Built with

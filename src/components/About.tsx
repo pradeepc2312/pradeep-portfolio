@@ -1,6 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { User, Mail, MapPin, Calendar, Code2, Sparkles, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { User, Mail, MapPin, Calendar } from 'lucide-react';
 import { tweenTransition } from '../lib/motionPresets';
 
 type AboutProps = { id?: string };
@@ -29,42 +28,14 @@ function InfoRow({
   );
 }
 
-function StatCard({
-  value,
-  label,
-  delay,
-}: {
-  value: string;
-  label: string;
-  delay: number;
-}) {
-  const reduce = useReducedMotion() ?? false;
-  return (
-    <motion.div
-      className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-8 text-center shadow-sm transition-all duration-300 hover:border-accent/40 hover:shadow-[0_8px_30px_rgba(139,92,246,0.12)]"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={tweenTransition(reduce, 0.35, delay)}
-    >
-      {/* hover gradient bg */}
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(139,92,246,0.07) 0%, transparent 70%)' }} />
-      <Code2 size={20} strokeWidth={1.6} className="mx-auto mb-3 text-accent/60 transition-colors group-hover:text-accent" />
-      <p className="font-mono text-4xl font-bold" style={{ background: 'linear-gradient(135deg,#8B5CF6,#34D399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-        {value}
-      </p>
-      <p className="mt-1.5 font-body text-xs tracking-wide text-muted">{label}</p>
-    </motion.div>
-  );
-}
+
 
 // ─── main component ───────────────────────────────────────────────────────────
 export function About({ id }: AboutProps): JSX.Element {
   const reduce = useReducedMotion() ?? false;
 
   return (
-    <section id={id} aria-labelledby="about-heading" className="relative overflow-hidden bg-bg py-28 md:py-36">
+    <section id={id} aria-labelledby="about-heading" className="relative overflow-hidden bg-bg py-16 md:py-24">
 
       {/* background decorations */}
       <div aria-hidden className="pointer-events-none absolute -left-32 top-1/3 h-72 w-72 rounded-full opacity-20 blur-3xl"
@@ -76,7 +47,7 @@ export function About({ id }: AboutProps): JSX.Element {
 
         {/* ── heading ── */}
         <motion.div
-          className="mb-20 text-center"
+          className="mb-12 text-center"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -97,11 +68,11 @@ export function About({ id }: AboutProps): JSX.Element {
         </motion.div>
 
         {/* ── two-column layout ── */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-20">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-16 lg:items-center">
 
           {/* ── LEFT: avatar + quick info ── */}
           <motion.div
-            className="flex flex-col items-center gap-8 lg:col-span-2 lg:items-start"
+            className="flex flex-col items-center gap-6 lg:col-span-2 lg:items-start"
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -149,7 +120,7 @@ export function About({ id }: AboutProps): JSX.Element {
 
           {/* ── RIGHT: bio + currently ── */}
           <motion.div
-            className="flex flex-col gap-9 lg:col-span-3"
+            className="flex flex-col justify-center gap-6 lg:col-span-3"
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -175,13 +146,6 @@ export function About({ id }: AboutProps): JSX.Element {
             </div>
 
           </motion.div>
-        </div>
-
-        {/* ── stats row ── */}
-        <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          <StatCard value="20+"   label="Projects Completed" delay={0} />
-          <StatCard value="1000+" label="Hours of Coding"    delay={0.1} />
-          <StatCard value="10+"   label="Technologies"       delay={0.2} />
         </div>
 
       </div>

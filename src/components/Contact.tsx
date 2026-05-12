@@ -15,7 +15,7 @@ export function Contact({ id }: ContactProps): JSX.Element {
   return (
     <section
       id={id}
-      className="mx-auto max-w-screen-xl px-5 py-18 md:px-10 md:py-28"
+      className="mx-auto max-w-screen-xl px-5 py-14 md:px-10 md:py-20"
       aria-label="Contact Pradeep C"
     >
       <a
