@@ -6,7 +6,7 @@ type AboutProps = { id?: string };
 
 const details = [
   { Icon: Mail,     label: 'Email',    value: 'hello@pradeepc.dev' },
-  { Icon: MapPin,   label: 'Location', value: 'Chennai, Tamil Nadu' },
+  { Icon: MapPin,   label: 'Location', value: 'Theni, Tamil Nadu' },
   { Icon: Calendar, label: 'Age',      value: '20' },
 ];
 
