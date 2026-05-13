@@ -94,7 +94,7 @@ export function Footer(): JSX.Element {
 
           {/* copyright */}
           <p className="font-mono text-[0.7rem] text-muted">
-            © 2025 Pradeep C
+            © 2026 Pradeep C
           </p>
 
           {/* live clock */}

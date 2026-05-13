@@ -1,5 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { tweenTransition } from '../lib/motionPresets';
+import image0 from '../assets/MongoDB.pdf';
+import image1 from '../assets/oracelse17.pdf';
 
 type CertificationsProps = { id?: string };
 
@@ -10,13 +12,13 @@ const certs = [
     title: 'Oracle Java SE 17 Developer',
     issuer: 'Oracle',
     year: '2025',
-    href: '#',
+    href: image1,
   },
   {
     title: 'MongoDB Associate Developer',
     issuer: 'MongoDB',
     year: '2024',
-    href: '#',
+    href: image0,
   },
 ];
 
