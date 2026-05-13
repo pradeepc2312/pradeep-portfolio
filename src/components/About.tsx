@@ -66,7 +66,7 @@ export function About({ id }: AboutProps): JSX.Element {
                 Hey! I'm{' '}
                 <span className="font-semibold text-fg">Pradeep C</span>, a full-stack developer
                 based in{' '}
-                <span className="font-semibold text-accent">Chennai, India</span>, passionate about
+                <span className="font-semibold text-accent">Theni, India</span>, passionate about
                 building clean, functional web applications using both frontend and backend
                 technologies.
               </p>
