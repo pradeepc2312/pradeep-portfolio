@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { projects, projectMatchesFilter, WORK_FILTERS, type WorkFilter } from '../data/projects';
+import { projects, projectMatchesFilter, type WorkFilter } from '../data/projects';
 import { cn } from '../lib/cn';
 import { ProjectCard } from './ProjectCard';
 
@@ -33,29 +33,7 @@ export function WorkGrid({ id }: WorkGridProps): JSX.Element {
         </div>
       </div>
 
-      <div
-        className="mb-10 flex flex-wrap gap-2 border-b border-border pb-4"
-        role="tablist"
-        aria-label="Filter projects"
-      >
-        {WORK_FILTERS.map((filter) => (
-          <button
-            key={filter}
-            type="button"
-            role="tab"
-            aria-selected={active === filter}
-            onClick={() => setActive(filter)}
-            className={cn(
-              'rounded-md border px-3 py-1.5 font-mono text-[0.75rem] uppercase tracking-wide transition-colors',
-              active === filter
-                ? 'border-accent bg-accent/15 text-fg'
-                : 'border-border bg-code-bg text-muted hover:border-accent/50 hover:text-fg',
-            )}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
+
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project) => (

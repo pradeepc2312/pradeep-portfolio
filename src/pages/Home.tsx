@@ -12,11 +12,14 @@ export function Home(): JSX.Element {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash === '#work') {
-      const el = document.getElementById('work');
-      window.requestAnimationFrame(() => {
-        el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
+    if (location.hash) {
+      const id = location.hash.substring(1);
+      const el = document.getElementById(id);
+      if (el) {
+        window.requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
     }
   }, [location.hash, location.pathname]);
 

@@ -17,7 +17,7 @@ const certs = [
   {
     title: 'MongoDB Associate Developer',
     issuer: 'MongoDB',
-    year: '2024',
+    year: '2025',
     href: image0,
   },
 ];

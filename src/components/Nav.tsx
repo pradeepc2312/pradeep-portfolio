@@ -69,9 +69,12 @@ export function Nav(): JSX.Element {
   }, [open]);
 
   const path = location.pathname;
-  const workActive    = path === '/' || path.startsWith('/work');
-  const aboutActive   = path === '/about';
-  const contactActive = path === '/contact';
+  const hash = location.hash;
+  const aboutActive   = path === '/about' || hash === '#about';
+  const skillsActive  = hash === '#skills';
+  const workActive    = hash === '#work' || path.startsWith('/work');
+  const certActive    = hash === '#certifications';
+  const contactActive = path === '/contact' || hash === '#contact';
 
   return (
     <>
@@ -86,7 +89,7 @@ export function Nav(): JSX.Element {
         <motion.nav
           aria-label="Primary"
           className={cn(
-            'flex w-full max-w-[860px] items-center justify-between',
+            'flex w-full max-w-[1024px] items-center justify-between',
             'rounded-full bg-bg border border-border px-7 py-4',
             'transition-shadow duration-300',
             scrolled
@@ -113,9 +116,11 @@ export function Nav(): JSX.Element {
 
           {/* ── Desktop links ── */}
           <div className="hidden md:flex items-center gap-8">
-            <NavLinkItem to="/#work"   label="Work"    isActive={workActive}    onNavigate={() => undefined} />
-            <NavLinkItem to="/about"   label="About"   isActive={aboutActive}   onNavigate={() => undefined} />
-            <NavLinkItem to="/contact" label="Contact" isActive={contactActive} onNavigate={() => undefined} />
+            <NavLinkItem to="/about"           label="About"          isActive={aboutActive}   onNavigate={() => undefined} />
+            <NavLinkItem to="/#skills"         label="Skills"         isActive={skillsActive}  onNavigate={() => undefined} />
+            <NavLinkItem to="/#work"           label="Work"           isActive={workActive}    onNavigate={() => undefined} />
+            <NavLinkItem to="/#certifications" label="Certifications" isActive={certActive}    onNavigate={() => undefined} />
+            <NavLinkItem to="/contact"         label="Contact"        isActive={contactActive} onNavigate={() => undefined} />
           </div>
 
           {/* ── CTA button ── */}
@@ -158,9 +163,11 @@ export function Nav(): JSX.Element {
               transition={reduce ? { duration: 0 } : { duration: 0.2, ease: [0.25, 1, 0.5, 1] }}
             >
               <div className="flex flex-col gap-5">
-                <NavLinkItem to="/#work"   label="Work"    isActive={workActive}    onNavigate={() => setOpen(false)} mobile />
-                <NavLinkItem to="/about"   label="About"   isActive={aboutActive}   onNavigate={() => setOpen(false)} mobile />
-                <NavLinkItem to="/contact" label="Contact" isActive={contactActive} onNavigate={() => setOpen(false)} mobile />
+                <NavLinkItem to="/about"           label="About"          isActive={aboutActive}   onNavigate={() => setOpen(false)} mobile />
+                <NavLinkItem to="/#skills"         label="Skills"         isActive={skillsActive}  onNavigate={() => setOpen(false)} mobile />
+                <NavLinkItem to="/#work"           label="Work"           isActive={workActive}    onNavigate={() => setOpen(false)} mobile />
+                <NavLinkItem to="/#certifications" label="Certifications" isActive={certActive}    onNavigate={() => setOpen(false)} mobile />
+                <NavLinkItem to="/contact"         label="Contact"        isActive={contactActive} onNavigate={() => setOpen(false)} mobile />
                 <Link
                   to="/contact"
                   onClick={() => setOpen(false)}
