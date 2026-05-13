@@ -7,7 +7,7 @@ type AboutProps = { id?: string };
 const details = [
   { Icon: Mail,     label: 'Email',    value: 'hello@pradeepc.dev' },
   { Icon: MapPin,   label: 'Location', value: 'Chennai, Tamil Nadu' },
-  { Icon: Calendar, label: 'Age',      value: '22' },
+  { Icon: Calendar, label: 'Age',      value: '20' },
 ];
 
 const stats = [
@@ -36,7 +36,7 @@ export function About({ id }: AboutProps): JSX.Element {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={tweenTransition(reduce, 0.4)}
+          transition={tweenTransition(reduce, 1)}
         >
           <p className="mb-3 font-mono text-[0.7rem] uppercase tracking-[0.22em] text-accent">
             &gt; whoami
@@ -58,7 +58,7 @@ export function About({ id }: AboutProps): JSX.Element {
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={tweenTransition(reduce, 0.45)}
+            transition={tweenTransition(reduce, 2)}
           >
             {/* bio */}
             <div className="space-y-5 font-body text-[1.05rem] leading-relaxed text-fg/80">
@@ -96,7 +96,7 @@ export function About({ id }: AboutProps): JSX.Element {
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ ...tweenTransition(reduce, 0.35), delay: 0.1 + i * 0.07 }}
+                  transition={{ ...tweenTransition(reduce, 0.35), delay: 0.4 + i * 0.07 }}
                 >
                   <Icon size={18} className="text-accent transition-transform duration-200 group-hover:scale-110" aria-hidden />
                   <p className="font-mono text-2xl font-bold text-fg">{value}</p>
