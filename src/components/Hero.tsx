@@ -11,7 +11,7 @@ type HeroProps = {
 export function Hero({ id }: HeroProps): JSX.Element {
   const reduce = useReducedMotion() ?? false;
   const line1 = useTypewriter('> Hello, I\'m', { msPerChar: 45 });
-  const line3 = useTypewriter('Full-Stack Developer & Creative Engineer', {
+  const line3 = useTypewriter('Full-Stack Developer & AI Engineer', {
     msPerChar: 40,
     enabled: line1.isComplete,
   });

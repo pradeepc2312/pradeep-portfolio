@@ -5,7 +5,7 @@ import { tweenTransition } from '../lib/motionPresets';
 type AboutProps = { id?: string };
 
 const details = [
-  { Icon: Mail,     label: 'Email',    value: 'hello@pradeepc.dev' },
+  { Icon: Mail,     label: 'Email',    value: 'pradeepc2312@gmail.com' },
   { Icon: MapPin,   label: 'Location', value: 'Theni, Tamil Nadu' },
   { Icon: Calendar, label: 'Age',      value: '20' },
 ];

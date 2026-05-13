@@ -8,14 +8,14 @@ type ContactProps = { id?: string };
 // ── data ───────────────────────────────────────────────────────────────────────
 
 const contactDetails = [
-  { Icon: Mail,   label: 'Email',    value: 'hello@pradeepc.dev', href: 'mailto:hello@pradeepc.dev' },
-  { Icon: Phone,  label: 'Phone',    value: '+91 XXXXXXXXXX',     href: 'tel:+91XXXXXXXXXX' },
-  { Icon: MapPin, label: 'Location', value: 'Tamil Nadu, India',  href: '#' },
+  { Icon: Mail,   label: 'Email',    value: 'pradeepc2312@gmail.com', href: 'mailto:[EMAIL_ADDRESS]' },
+  { Icon: Phone,  label: 'Phone',    value: '+91 7339286248',     href: 'tel:+917339286248' },
+  { Icon: MapPin, label: 'Location', value: 'Theni, Tamil Nadu, India',  href: '#' },
 ];
 
 const socials = [
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/pradeepc', Icon: Linkedin,  color: '#0A66C2' },
-  { label: 'GitHub',    href: 'https://github.com/pradeepc',           Icon: Github,   color: '#24292e' },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/pradeep-c-701980377/', Icon: Linkedin,  color: '#0A66C2' },
+  { label: 'GitHub',    href: 'https://github.com/pradeepc2312',           Icon: Github,   color: '#24292e' },
   { label: 'Twitter',   href: 'https://twitter.com/pradeepc',          Icon: Twitter,  color: '#1DA1F2' },
   { label: 'Instagram', href: '#',                                     Icon: Instagram,color: '#E1306C' },
 ] as const;

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useLiveClock } from '../hooks/useLiveClock';
 
 const socials = [
-  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/pradeepc', Icon: Linkedin  },
-  { label: 'GitHub',    href: 'https://github.com/pradeepc',           Icon: Github   },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/pradeep-c-701980377/', Icon: Linkedin  },
+  { label: 'GitHub',    href: 'https://github.com/pradeepc2312',           Icon: Github   },
   { label: 'Twitter',   href: 'https://twitter.com/pradeepc',          Icon: Twitter  },
   { label: 'Instagram', href: '#',                                     Icon: Instagram },
 ] as const;
@@ -94,7 +94,7 @@ export function Footer(): JSX.Element {
 
           {/* copyright */}
           <p className="font-mono text-[0.7rem] text-muted">
-            © 2025 Pradeep C · Built with React & TypeScript
+            © 2025 Pradeep C
           </p>
 
           {/* live clock */}
